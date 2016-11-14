@@ -311,7 +311,7 @@ print("hello")
 Created by [40523137](http://s40523137.github.io/kmolab/blog/)
 &lt;/small&gt;
 
-[40523216](blog/index.html)
+[40523137](blog/index.html)
 
 </t>
 <t tx="amd.20161004104641.1">&lt;section data-markdown&gt;
