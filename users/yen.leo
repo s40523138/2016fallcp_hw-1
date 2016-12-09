@@ -164,11 +164,13 @@
 <v t="amd.20151215170031.1" a="E"><vh>@path ./../content</vh>
 <v t="amd.20160106093454.1" a="E"><vh>yen 所寫的網誌文章</vh>
 <v t="amd.20160727114506.1" a="E"><vh>201609</vh>
-<v t="amd.20160727120222.1"><vh>@edit 繪圖..md</vh></v>
-<v t="leo.20161014142409.1"><vh>@edit 繪圖2.md</vh></v>
-<v t="leo.20161024160947.1"><vh>@edit 20161209.md</vh></v>
+<v t="leo.20161209173501.1"><vh>@edit 20161114..md</vh></v>
+<v t="leo.20161209173510.1"><vh>@edit 20161202.md</vh></v>
+<v t="leo.20161209181701.1"><vh>@edit 20161209a.md</vh></v>
+<v t="leo.20161209181835.1"><vh>@edit 20161209b.md</vh></v>
+<v t="leo.20161014142409.1"><vh>@edit 20161014.md</vh></v>
+<v t="leo.20161024160947.1"><vh>@edit 20161024.md</vh></v>
 <v t="leo.20161031143324.1"><vh>@edit 20161031.md</vh></v>
-<v t="leo.20161114144548.1"><vh>@edit 20161114.md</vh></v>
 </v>
 </v>
 </v>
@@ -179,7 +181,7 @@
 </v>
 <v t="amd.20161004202833.1"><vh>@edit ../README.md</vh></v>
 <v t="yen.20161022111056.1"><vh>@button https server</vh></v>
-<v t="leo.20161209142125.1"><vh>@button ipv6 https server</vh></v>
+<v t="leo.20161209173538.1"><vh>@button ipv6 https server</vh></v>
 <v t="yen.20161022151749.1"><vh>產生 .key 與 .crt</vh></v>
 </vnodes>
 <tnodes>
@@ -477,7 +479,7 @@ PLUGINS = ['liquid_tags.notebook', 'summary']
 <t tx="leo.20151213230957.1"># 設定網誌以 md 檔案建立的 file system date 為準, 無需自行設定
 
 DEFAULT_DATE = 'fs'</t>
-<t tx="leo.20161209142125.1">@language python
+<t tx="leo.20161209173538.1">@language python
 import os
 import subprocess
 import threading
@@ -1057,14 +1059,14 @@ import http.server, ssl
 def domake():
     # build directory
     os.chdir("./../")
-    server_address = ('localhost', 192.168.56.1)
+    server_address = ('localhost', 5443)
     httpd = http.server.HTTPServer(server_address, http.server.SimpleHTTPRequestHandler)
     httpd.socket = ssl.wrap_socket(httpd.socket,
                                    server_side=True,
                                    certfile='localhost.crt',
                                    keyfile='localhost.key',
                                    ssl_version=ssl.PROTOCOL_TLSv1)
-    print("192.168.56.1 https server started")
+    print("5443 https server started")
     httpd.serve_forever()
 
 # 利用執行緒執行 https 伺服器
