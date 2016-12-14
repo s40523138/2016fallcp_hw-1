@@ -14,7 +14,7 @@
 <v t="leo.20151212173315.3"><vh>@string initial_split_orientation = horizontal</vh></v>
 </v>
 <v t="amd.20160921213353.1"><vh>2016fall 簡報與網誌樣板系統</vh></v>
-<v t="amd.20160106095324.1" a="E"><vh>@path ./../</vh>
+<v t="amd.20160106095324.1"><vh>@path ./../</vh>
 <v t="leo.20151213173830.1" a="E"><vh>假如要在近端檢視, 使用下列按鈕</vh>
 <v t="leo.20151213085727.1"><vh>@button pelican-blog</vh></v>
 </v>
@@ -149,7 +149,7 @@
 </v>
 </v>
 </v>
-<v t="leo.20151213230723.1"><vh>Pelican 設定</vh>
+<v t="leo.20151213230723.1" a="E"><vh>Pelican 設定</vh>
 <v t="leo.20151213230957.1"><vh>文章 Date 設定</vh></v>
 <v t="leo.20151213230729.1"><vh>使用 summary plugin</vh></v>
 </v>
@@ -161,16 +161,15 @@
 </v>
 <v t="amd.20151215170350.1"><vh>以下為 content 目錄中的 md 檔案</vh></v>
 <v t="amd.20151216001126.1"><vh>md 檔案範例</vh></v>
-<v t="amd.20151215170031.1" a="E"><vh>@path ./../content</vh>
-<v t="amd.20160106093454.1" a="E"><vh>yen 所寫的網誌文章</vh>
-<v t="amd.20160727114506.1" a="E"><vh>201609</vh>
-<v t="leo.20161209173501.1"><vh>@edit 20161114..md</vh></v>
-<v t="leo.20161209173510.1"><vh>@edit 20161202.md</vh></v>
-<v t="leo.20161209181701.1"><vh>@edit 20161209a.md</vh></v>
-<v t="leo.20161209181835.1"><vh>@edit 20161209b.md</vh></v>
+<v t="amd.20151215170031.1"><vh>@path ./../content</vh>
+<v t="amd.20160106093454.1" a="E"><vh>楊永慶 所寫的網誌文章</vh>
+<v t="amd.20160727114506.1" a="E"><vh>2016</vh>
+<v t="amd.20160727120222.1"><vh>@edit 20160921.md</vh></v>
 <v t="leo.20161014142409.1"><vh>@edit 20161014.md</vh></v>
-<v t="leo.20161024160947.1"><vh>@edit 20161024.md</vh></v>
-<v t="leo.20161031143324.1"><vh>@edit 20161031.md</vh></v>
+<v t="leo.20161214215900.1"><vh>@edit 20161114..md</vh></v>
+<v t="leo.20161214215909.1"><vh>@edit 20161202.md</vh></v>
+<v t="leo.20161214215924.1"><vh>@edit 20161209a.md</vh></v>
+<v t="leo.20161214215933.1"><vh>@edit 20161209b.md</vh></v>
 </v>
 </v>
 </v>
@@ -181,7 +180,7 @@
 </v>
 <v t="amd.20161004202833.1"><vh>@edit ../README.md</vh></v>
 <v t="yen.20161022111056.1"><vh>@button https server</vh></v>
-<v t="leo.20161209173538.1"><vh>@button ipv6 https server</vh></v>
+<v t="leo.20161214221354.1"><vh>@button ipv6 https server</vh></v>
 <v t="yen.20161022151749.1"><vh>產生 .key 與 .crt</vh></v>
 </vnodes>
 <tnodes>
@@ -315,7 +314,6 @@ Created by [40523137](http://s40523137.github.io/kmolab/blog/)
 &lt;/small&gt;
 
 [40523137](blog/index.html)
-
 </t>
 <t tx="amd.20161004104641.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
@@ -479,7 +477,7 @@ PLUGINS = ['liquid_tags.notebook', 'summary']
 <t tx="leo.20151213230957.1"># 設定網誌以 md 檔案建立的 file system date 為準, 無需自行設定
 
 DEFAULT_DATE = 'fs'</t>
-<t tx="leo.20161209173538.1">@language python
+<t tx="leo.20161214221354.1">@language python
 import os
 import subprocess
 import threading
