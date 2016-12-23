@@ -170,9 +170,9 @@
 <v t="leo.20161216133217.1"><vh>@edit 20161202.md</vh></v>
 <v t="leo.20161214215924.1"><vh>@edit 20161209a.md</vh></v>
 <v t="leo.20161214215933.1"><vh>@edit 20161209b.md</vh></v>
-<v t="leo.20161216135359.1" a="E"><vh>@clean 20161217.md</vh>
+<v t="leo.20161216135359.1"><vh>@clean 20161217.md</vh>
 <v t="leo.20161216135359.2"><vh>ch01 print() 與 input()</vh></v>
-<v t="leo.20161216135359.3"><vh>cp a w13</vh></v>
+<v t="leo.20161216135359.3"><vh>cp  w13</vh></v>
 <v t="leo.20161216135359.4"><vh>Brython editor</vh></v>
 <v t="leo.20161216135359.5"><vh>ex1 - for 迴圈</vh></v>
 <v t="leo.20161216135359.6"><vh>ex2 - input 與單位換算</vh></v>
@@ -180,6 +180,7 @@
 <v t="leo.20161216135359.8"><vh>ex4 - local_storage</vh></v>
 <v t="leo.20161216135359.9"><vh>ch02 str() 與 int() 與 float()</vh></v>
 </v>
+<v t="leo.20161223151719.1"><vh>@edit 20161223.md</vh></v>
 </v>
 </v>
 </v>
@@ -516,7 +517,7 @@ def domake():
 make = threading.Thread(target=domake)
 make.start()</t>
 <t tx="leo.20161216135359.1">@language md
-Title: 計算機程式 W14 範例整理
+Title: W14 
 Date: 2016-12-06 13:00
 Category: Course
 Tags: Brython
@@ -573,8 +574,8 @@ from browser import alert
 '''
 
 def get_input(ev):
-    the_input= input("上課不會滑手機")
-    alert("上課不會滑手機:"+str(the_input))
+    the_input= input("請輸入")
+    alert("輸入為:"+str(上課不會滑手機))
 
 document['ch01'].bind('click',get_input)
 &lt;/script&gt;
@@ -1468,14 +1469,14 @@ import http.server, ssl
 def domake():
     # build directory
     os.chdir("./../")
-    server_address = ('localhost', 5443)
+    server_address = ('localhost', 8443)
     httpd = http.server.HTTPServer(server_address, http.server.SimpleHTTPRequestHandler)
     httpd.socket = ssl.wrap_socket(httpd.socket,
                                    server_side=True,
                                    certfile='localhost.crt',
                                    keyfile='localhost.key',
                                    ssl_version=ssl.PROTOCOL_TLSv1)
-    print("5443 https server started")
+    print("8443 https server started")
     httpd.serve_forever()
 
 # 利用執行緒執行 https 伺服器

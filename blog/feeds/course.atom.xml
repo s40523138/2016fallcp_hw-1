@@ -73,7 +73,7 @@ container &lt;= mystring
 &lt;p&gt;開始進行範例分配&lt;/p&gt;
 &lt;p&gt;接受使用者輸入&lt;/p&gt;
 &lt;p&gt;利用aler()顯示結果&lt;/p&gt;
-&lt;p&gt;直接列印結果&lt;/p&gt;</summary><category term="Brython"></category></entry><entry><title>計算機程式 W14 範例整理</title><link href="./ji-suan-ji-cheng-shi-w14-fan-li-zheng-li.html" rel="alternate"></link><published>2016-12-06T13:00:00+08:00</published><updated>2016-12-06T13:00:00+08:00</updated><author><name>yen</name></author><id>tag:,2016-12-06:./ji-suan-ji-cheng-shi-w14-fan-li-zheng-li.html</id><summary type="html">&lt;p&gt;本週的學習重點在導入 Leo Editor &lt;a href="http://leoeditor.com/tutorial-programming.html"&gt;@clean&lt;/a&gt; 節點指令的用法, 利用子節點管理各章節的範例, 逐一將程式改寫為 Brython 格式後, 直接在瀏覽器中執行. 讓學員了解使用階層式架構管理資料的便利性.&lt;/p&gt;
+&lt;p&gt;直接列印結果&lt;/p&gt;</summary><category term="Brython"></category></entry><entry><title>W14</title><link href="./w14.html" rel="alternate"></link><published>2016-12-06T13:00:00+08:00</published><updated>2016-12-06T13:00:00+08:00</updated><author><name>yen</name></author><id>tag:,2016-12-06:./w14.html</id><summary type="html">&lt;p&gt;本週的學習重點在導入 Leo Editor &lt;a href="http://leoeditor.com/tutorial-programming.html"&gt;@clean&lt;/a&gt; 節點指令的用法, 利用子節點管理各章節的範例, 逐一將程式改寫為 Brython 格式後, 直接在瀏覽器中執行. 讓學員了解使用階層式架構管理資料的便利性.&lt;/p&gt;
 
 
 &lt;p&gt;以下為 &lt;a href="http://mde.tw/2016fallcp/course/Python3Programs.txt"&gt;http://mde.tw/2016fallcp/course/Python3Programs.txt&lt;/a&gt; 中的 ch01 綜合範例, 其餘範例位於本 Leo Editor 專案檔中的 "Python3 程式範例" 節點, 請各組一一將範例程式碼與執行結果, 放入各學員的課程網誌中.&lt;/p&gt;
@@ -123,8 +123,8 @@ from browser import alert
 '''
 
 def get_input(ev):
-    the_input= input("上課不會滑手機")
-    alert("上課不會滑手機:"+str(the_input))
+    the_input= input("請輸入")
+    alert("輸入為:"+str(上課不會滑手機))
 
 document['ch01'].bind('click',get_input)
 &lt;/script&gt;
@@ -737,4 +737,45 @@ ctx.strokeStyle = "blue"
 ctx.stroke()
 ctx.closePath()
 &lt;/script&gt;
-&lt;/pre&gt;</summary><category term="Brython"></category></entry></feed>
+&lt;/pre&gt;</summary><category term="Brython"></category></entry><entry><title>W15</title><link href="./w15.html" rel="alternate"></link><published>2016-11-14T12:00:00+08:00</published><updated>2016-11-14T12:00:00+08:00</updated><author><name>楊永慶</name></author><id>tag:,2016-11-14:./w15.html</id><summary type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+&lt;!-- 導入 Brython 標準程式庫 --&gt;
+
+&lt;script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
+&lt;/script&gt;
+
+&lt;!-- 啟動 Brython --&gt;
+
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
+
+&lt;!-- 以下實際利用  Brython 程式 --&gt;
+
+&lt;div id="con"&gt;&lt;/div&gt;
+
+&lt;script type="text/python3"&gt;
+from browser import document as do
+from browser import html
+c = do["con"]
+def compa(e):
+    your_input = input("請輸入一個整數!")
+    # 如何判斷所輸入的整數比 10 大
+
+    if int(your_input) &gt; 10:
+        c &lt;= "所輸入的整數:" + your_input + "比 10 大" + html.BR()
+    else:
+        c &lt;= "所輸入的整數:" + your_input + "比 10 小" + html.BR()
+
+#print("test")
+'''
+for i in range(5):
+    c &lt;= "test" + html.BR()
+'''
+do["b1"].bind("click", compa)
+&lt;/script&gt;
+
+&lt;p&gt;&lt;button id="b1"&gt;compa&lt;/button&gt;&lt;/p&gt;</summary><category term="Brython"></category></entry></feed>

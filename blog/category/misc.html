@@ -290,6 +290,38 @@ init_mathjax();
             </article>
             <hr/>
             <article>
+                <h2><a href="../2016fall.html">2016Fall</a></h2>
+                <div class="summary"><!-- 導入 Brython 標準程式庫 -->
+
+<script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
+</script>
+
+<!-- 啟動 Brython -->
+
+<script>
+window.onload=function(){
+brython(1);
+}
+</script>
+
+<!-- 以下實際利用  Brython 畫圖 -->
+
+<div id="container"></div>
+
+<script type="text/python3">
+from browser import document as doc
+from browser import html
+container = doc["container"]
+mvstring = ""
+num = input("請輸入重複執行次數")
+#for i in range(1,11):
+for i in range(1,int ...</script></!--></!--></!-->
+                    <a class="btn btn-default btn-xs" href="../2016fall.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="../2016fall-cheng-shi-lian-xi-ti.html">2016Fall 程式練習題</a></h2>
                 <div class="summary"><p>已知截至第六週 2016fallcpa 的分組資料位於倉儲中的 <a href="./../w6_group.txt">w6_group.txt</a>, 而從學校修課系統下載的修課人員名條則為 <a href="./../w6_list.txt">w6_list.txt</a>, 請各組著手練習, 找出尚未納入分組的人員名單, 並研擬如何處置上課一個半月卻尚未進入情況的學員?</p>
 
@@ -318,6 +350,11 @@ init_mathjax();
                     <li class="list-group-item">
                         <a href="../w14-lian-xi.html">
                             W14 練習
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="../2016fall.html">
+                            2016Fall
                         </a>
                     </li>
                     <li class="list-group-item">

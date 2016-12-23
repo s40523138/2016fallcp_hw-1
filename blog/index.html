@@ -299,6 +299,38 @@ http://mde.tw/2016fallcp/course/Python3Programs.txt</a> 整理成brython
             </article>
             <hr/>
             <article>
+                <h2><a href="./2016fall.html">2016Fall</a></h2>
+                <div class="summary"><!-- 導入 Brython 標準程式庫 -->
+
+<script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
+</script>
+
+<!-- 啟動 Brython -->
+
+<script>
+window.onload=function(){
+brython(1);
+}
+</script>
+
+<!-- 以下實際利用  Brython 畫圖 -->
+
+<div id="container"></div>
+
+<script type="text/python3">
+from browser import document as doc
+from browser import html
+container = doc["container"]
+mvstring = ""
+num = input("請輸入重複執行次數")
+#for i in range(1,11):
+for i in range(1,int ...</script></!--></!--></!-->
+                    <a class="btn btn-default btn-xs" href="./2016fall.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="./w13-lian-xi-1.html">W13  練習-1</a></h2>
                 <div class="summary"><p>將<a herf="http://mde.tw/2016fallcp/course/Python3Programs.txt">
 http://mde.tw/2016fallcp/course/Python3Programs.txt</a> 整理成brython</p>
@@ -308,10 +340,10 @@ http://mde.tw/2016fallcp/course/Python3Programs.txt</a> 整理成brython</p>
             </article>
             <hr/>
             <article>
-                <h2><a href="./ji-suan-ji-cheng-shi-w14-fan-li-zheng-li.html">計算機程式 W14 範例整理</a></h2>
+                <h2><a href="./w14.html">W14</a></h2>
                 <div class="summary"><p>本週的學習重點在導入 Leo Editor <a href="http://leoeditor.com/tutorial-programming.html">@clean</a> 節點指令的用法, 利用子節點管理各章節的範例, 逐一將程式改寫為 Brython 格式後, 直接在瀏覽器中執行. 讓學員了解使用階層式架構管理資料的便利性.</p>
 
-                    <a class="btn btn-default btn-xs" href="./ji-suan-ji-cheng-shi-w14-fan-li-zheng-li.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="./w14.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -328,6 +360,13 @@ http://mde.tw/2016fallcp/course/Python3Programs.txt</a> 整理成brython</p>
                 <div class="summary"><p>Brython 繪圖</p>
 
                     <a class="btn btn-default btn-xs" href="./w10-brython-hui-tu-fan-li.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="./w15.html">W15</a></h2>
+                <div class="summary">
+                    <a class="btn btn-default btn-xs" href="./w15.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -368,18 +407,18 @@ http://mde.tw/2016fallcp/course/Python3Programs.txt</a> 整理成brython</p>
                         </a>
                     </li>
                     <li class="list-group-item">
+                        <a href="./2016fall.html">
+                            2016Fall
+                        </a>
+                    </li>
+                    <li class="list-group-item">
                         <a href="./w13-lian-xi-1.html">
                             W13  練習-1
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="./ji-suan-ji-cheng-shi-w14-fan-li-zheng-li.html">
-                            計算機程式 W14 範例整理
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="./w12-brython-hui-tu-fan-li.html">
-                            W12 Brython 繪圖範例
+                        <a href="./w14.html">
+                            W14
                         </a>
                     </li>
                 </ul>
