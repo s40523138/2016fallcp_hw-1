@@ -318,8 +318,8 @@ init_mathjax();
                 <p>2017年元旦快樂</p>
 
 
-<p>首先了解random 亂數模組方式的用法</p>
-<p>然後利用random 模組慘生一個警界愈1-100的負數，列印在網頁上。</p>
+<p>首先了解random亂數模組的用法</p>
+<p>然後利用random模組產生一個介於1-100的整數,列印在網頁上</p>
 <!-- 導入 Brython 標準程式庫 -->
 
 <script type="text/javascript" 
@@ -345,49 +345,20 @@ import random
 print_location = document["newyear"]
 
 def gen_int():
-    num = random.randint(1, 49)
-    # 設法將 num 列印在網頁上
+    num = random.randint(1,100)
     #print_location = document["newyear"]
     print_location <= num + html.BR()
 
 def lottery(e):
     for i in range(6):
         gen_int()
-    print_location <= "恭喜中獎!" + html.BR()
+    print_location <= "恭喜中獎?" + html.BR()
 
 #document["but1"].bind("click", gen_int)
 document["but1"].bind("click", lottery)
 </script>
 
 <p><button id="but1">產生整數亂數</button></p>
-
-<pre class="brush: python">
-<div id="newyear"></div>
-<script type="text/python3">
-from browser import document
-from browser import html
-import random
-print_location = document["newyear"]
-
-def gen_int():
-    num = random.randint(1, 49)
-    # 設法將 num 列印在網頁上
-    #print_location = document["newyear"]
-    print_location <= num + html.BR()
-
-def lottery(e):
-    for i in range(6):
-        gen_int()
-    print_location <= "恭喜中獎!" + html.BR()
-
-#document["but1"].bind("click", gen_int)
-document["but1"].bind("click", lottery)
-</script>
-<button id="but1">產生整數亂數</button>
-</pre>
-
-<p>因為上述程式可能會產生相同的號碼, 改用<a href="https://docs.python.org/3/library/random.html#random.sample"> random.sample()</a>, 使其產生六個不同的整數!!</p>
-
 <script type="text/python3">
 from browser import document
 from browser import html
@@ -398,28 +369,12 @@ def lottery(e):
     num_list = random.sample(list(range(1, 50)), 6)
     for i in range(6):
         print_location <= num_list[i] + html.BR()
-    print_location <= "恭喜中獎!" + html.BR()
+    print_location <= "(不會重複)恭喜中獎!" + html.BR()
 
 document["but2"].bind("click", lottery)
 </script>
 
-<p><button id="but2">恭喜中獎</button></p>
-
-<pre class="brush: python">
-<script type="text/python3">
-from browser import document
-from browser import html
-import random
-print_location = document["newyear"]
-
-def lottery(e):
-    num_list = random.sample(list(range(1, 50)), 6)
-    for i in range(6):
-        print_location <= num_list[i] + html.BR()
-    print_location <= "恭喜中獎!" + html.BR()
-
-document["but2"].bind("click", lottery)
-</script>
+<p><button id="but2">恭喜發財</button></p>
             </div>
             <!-- /.entry-content -->
         </article>

@@ -2,8 +2,8 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>2016Fall CPA 課程網誌 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/course.atom.xml" rel="self"></link><id>./</id><updated>2016-12-30T12:00:00+08:00</updated><entry><title>W16 新年快樂</title><link href="./w16-xin-nian-kuai-le.html" rel="alternate"></link><published>2016-12-30T12:00:00+08:00</published><updated>2016-12-30T12:00:00+08:00</updated><author><name>40523137</name></author><id>tag:,2016-12-30:./w16-xin-nian-kuai-le.html</id><summary type="html">&lt;p&gt;2017年元旦快樂&lt;/p&gt;
 
 
-&lt;p&gt;首先了解random 亂數模組方式的用法&lt;/p&gt;
-&lt;p&gt;然後利用random 模組慘生一個警界愈1-100的負數，列印在網頁上。&lt;/p&gt;
+&lt;p&gt;首先了解random亂數模組的用法&lt;/p&gt;
+&lt;p&gt;然後利用random模組產生一個介於1-100的整數,列印在網頁上&lt;/p&gt;
 &lt;!-- 導入 Brython 標準程式庫 --&gt;
 
 &lt;script type="text/javascript" 
@@ -29,49 +29,20 @@ import random
 print_location = document["newyear"]
 
 def gen_int():
-    num = random.randint(1, 49)
-    # 設法將 num 列印在網頁上
+    num = random.randint(1,100)
     #print_location = document["newyear"]
     print_location &lt;= num + html.BR()
 
 def lottery(e):
     for i in range(6):
         gen_int()
-    print_location &lt;= "恭喜中獎!" + html.BR()
+    print_location &lt;= "恭喜中獎?" + html.BR()
 
 #document["but1"].bind("click", gen_int)
 document["but1"].bind("click", lottery)
 &lt;/script&gt;
 
 &lt;p&gt;&lt;button id="but1"&gt;產生整數亂數&lt;/button&gt;&lt;/p&gt;
-
-&lt;pre class="brush: python"&gt;
-&lt;div id="newyear"&gt;&lt;/div&gt;
-&lt;script type="text/python3"&gt;
-from browser import document
-from browser import html
-import random
-print_location = document["newyear"]
-
-def gen_int():
-    num = random.randint(1, 49)
-    # 設法將 num 列印在網頁上
-    #print_location = document["newyear"]
-    print_location &lt;= num + html.BR()
-
-def lottery(e):
-    for i in range(6):
-        gen_int()
-    print_location &lt;= "恭喜中獎!" + html.BR()
-
-#document["but1"].bind("click", gen_int)
-document["but1"].bind("click", lottery)
-&lt;/script&gt;
-&lt;button id="but1"&gt;產生整數亂數&lt;/button&gt;
-&lt;/pre&gt;
-
-&lt;p&gt;因為上述程式可能會產生相同的號碼, 改用&lt;a href="https://docs.python.org/3/library/random.html#random.sample"&gt; random.sample()&lt;/a&gt;, 使其產生六個不同的整數!!&lt;/p&gt;
-
 &lt;script type="text/python3"&gt;
 from browser import document
 from browser import html
@@ -82,28 +53,12 @@ def lottery(e):
     num_list = random.sample(list(range(1, 50)), 6)
     for i in range(6):
         print_location &lt;= num_list[i] + html.BR()
-    print_location &lt;= "恭喜中獎!" + html.BR()
+    print_location &lt;= "(不會重複)恭喜中獎!" + html.BR()
 
 document["but2"].bind("click", lottery)
 &lt;/script&gt;
 
-&lt;p&gt;&lt;button id="but2"&gt;恭喜中獎&lt;/button&gt;&lt;/p&gt;
-
-&lt;pre class="brush: python"&gt;
-&lt;script type="text/python3"&gt;
-from browser import document
-from browser import html
-import random
-print_location = document["newyear"]
-
-def lottery(e):
-    num_list = random.sample(list(range(1, 50)), 6)
-    for i in range(6):
-        print_location &lt;= num_list[i] + html.BR()
-    print_location &lt;= "恭喜中獎!" + html.BR()
-
-document["but2"].bind("click", lottery)
-&lt;/script&gt;</summary><category term="Brython"></category></entry><entry><title>CP W15 練習</title><link href="./cp-w15-lian-xi.html" rel="alternate"></link><published>2016-12-23T12:00:00+08:00</published><updated>2016-12-23T12:00:00+08:00</updated><author><name>40523137</name></author><id>tag:,2016-12-23:./cp-w15-lian-xi.html</id><summary type="html">&lt;!-- 導入 Brython 標準程式庫 --&gt;
+&lt;p&gt;&lt;button id="but2"&gt;恭喜發財&lt;/button&gt;&lt;/p&gt;</summary><category term="Brython"></category></entry><entry><title>CP W15 練習</title><link href="./cp-w15-lian-xi.html" rel="alternate"></link><published>2016-12-23T12:00:00+08:00</published><updated>2016-12-23T12:00:00+08:00</updated><author><name>40523137</name></author><id>tag:,2016-12-23:./cp-w15-lian-xi.html</id><summary type="html">&lt;!-- 導入 Brython 標準程式庫 --&gt;
 
 &lt;script type="text/javascript" 
     src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
