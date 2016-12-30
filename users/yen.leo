@@ -180,7 +180,8 @@
 <v t="leo.20161216135359.8"><vh>ex4 - local_storage</vh></v>
 <v t="leo.20161216135359.9"><vh>ch02 str() 與 int() 與 float()</vh></v>
 </v>
-<v t="leo.20161223151719.1"><vh>@edit 20161223.md</vh></v>
+<v t="leo.20161230133320.1"><vh>@edit 20161223.md</vh></v>
+<v t="leo.20161230133341.1"><vh>@edit 20161230.md</vh></v>
 </v>
 </v>
 </v>
@@ -193,6 +194,12 @@
 <v t="yen.20161022111056.1"><vh>@button https server</vh></v>
 <v t="leo.20161214221354.1"><vh>@button ipv6 https server</vh></v>
 <v t="yen.20161022151749.1"><vh>產生 .key 與 .crt</vh></v>
+<v t="leo.20161230131434.1" a="E"><vh>Recovered Nodes</vh>
+<v t="leo.20161230131434.2"><vh>Recovered node "ch01 print() 與 input()" from @clean 20161217.md</vh>
+<v t="leo.20161230131434.3"><vh>old:ch01 print() 與 input()</vh></v>
+<v t="leo.20161230131434.4"><vh>new:ch01 print() 與 input()</vh></v>
+</v>
+</v>
 </vnodes>
 <tnodes>
 <t tx="amd.20151215170031.1"></t>
@@ -517,7 +524,7 @@ def domake():
 make = threading.Thread(target=domake)
 make.start()</t>
 <t tx="leo.20161216135359.1">@language md
-Title: W14 
+Title: 計算機程式 W14 範例整理
 Date: 2016-12-06 13:00
 Category: Course
 Tags: Brython
@@ -574,8 +581,8 @@ from browser import alert
 '''
 
 def get_input(ev):
-    the_input= input("請輸入")
-    alert("輸入為:"+str(上課不會滑手機))
+    the_input= input("上課不會滑手機")
+    alert("上課不會滑手機:"+str(the_input))
 
 document['ch01'].bind('click',get_input)
 &lt;/script&gt;
@@ -593,7 +600,8 @@ def get_input(ev):
 document['ch01'].bind('click',get_input)
 &lt;/script&gt;
 &lt;button id="ch01"&gt;取輸入後, 列印出來&lt;/button&gt;
-&lt;/pre&gt;</t>
+&lt;/pre&gt;
+</t>
 <t tx="leo.20161216135359.3">&lt;!-- 重複迴圈與 input() 練習 --&gt;
 
 &lt;div id="container"&gt;&lt;/div&gt;
@@ -860,7 +868,8 @@ convTemp()
     script1.editor.scrollToRow(0)
     script1.editor.gotoLine(0)
 doc['ex2'].bind('click',ex2)
-&lt;/script&gt;&lt;a id="ex2"&gt;ex2&lt;/a&gt; - input() 與函式定義進行溫度轉換</t>
+&lt;/script&gt;&lt;a id="ex2"&gt;ex2&lt;/a&gt; - input() 與函式定義進行溫度轉換
+</t>
 <t tx="leo.20161216135359.7">
 &lt;!-- 請注意, 在 &lt;script&gt; 標註前一定要至少空一行 --&gt;
 &lt;script type="text/python3"&gt;
@@ -912,11 +921,161 @@ print(storage["py_src"])
     script1.editor.scrollToRow(0)
     script1.editor.gotoLine(0)
 doc['ex4'].bind('click',ex4)
-&lt;/script&gt;&lt;a id="ex4"&gt;ex4&lt;/a&gt; - 將程式在近端存檔</t>
+&lt;/script&gt;&lt;a id="ex4"&gt;ex4&lt;/a&gt; - 將程式在近端存檔
+</t>
 <t tx="leo.20161216135359.9">&lt;script type="text/python3"&gt;
 from browser import document
 from browser import alert
-&lt;/script&gt;</t>
+&lt;/script&gt;
+</t>
+<t tx="leo.20161230131434.1"></t>
+<t tx="leo.20161230131434.2">(uncached) leo.20161216135359.2
+Diff...
+  &lt;!-- ch01 基本的列印與輸入函式 --&gt;
+  &lt;script type="text/python3"&gt;
+  from browser import document
+  from browser import alert
+  
+  '''
+      # 利用 input() 取得使用者輸入, 然後進行資料處理或運算後, 列出結果
+      #01-01.py
+      print ("Hello World!")
+      #01-02.py
+      thetext = input("Enter some text ")
+      print ("This is what you entered:")
+      print (thetext)
+      #01-03.py
+      # Note that \n within quote marks forces a new line to be printed
+      thetext = input("Enter some text\n")
+      print ("This is what you entered:")
+      print (thetext)
+      #01-04.py
+      prompt  = "Enter a some text "
+      thetext = input(prompt)
+      print ("This is what you entered:")
+      print (thetext)
+  '''
+  
+  def get_input(ev):
+-     the_input= input("上課不會滑手機")
+?                       ^^^^^^^
++     the_input= input("請輸入")
+?                       ^^^
+-     alert("上課不會滑手機:"+str(the_input))
++     alert("輸入為:"+str(上課不會滑手機))
+  
+  document['ch01'].bind('click',get_input)
+  &lt;/script&gt;
+  &lt;button id="ch01"&gt;40523137&lt;/button&gt;
+  
+  &lt;pre class="brush: python"&gt;
+  &lt;script type="text/python3"&gt;
+  from browser import document
+  from browser import alert
+  
+  def get_input(ev):
+      the_input= input("請輸入")
+      alert("輸入為:"+str(the_input))
+  
+  document['ch01'].bind('click',get_input)
+  &lt;/script&gt;
+  &lt;button id="ch01"&gt;取輸入後, 列印出來&lt;/button&gt;
+- &lt;/pre&gt;
+?       -
++ &lt;/pre&gt;</t>
+<t tx="leo.20161230131434.3">&lt;!-- ch01 基本的列印與輸入函式 --&gt;
+&lt;script type="text/python3"&gt;
+from browser import document
+from browser import alert
+
+'''
+    # 利用 input() 取得使用者輸入, 然後進行資料處理或運算後, 列出結果
+    #01-01.py
+    print ("Hello World!")
+    #01-02.py
+    thetext = input("Enter some text ")
+    print ("This is what you entered:")
+    print (thetext)
+    #01-03.py
+    # Note that \n within quote marks forces a new line to be printed
+    thetext = input("Enter some text\n")
+    print ("This is what you entered:")
+    print (thetext)
+    #01-04.py
+    prompt  = "Enter a some text "
+    thetext = input(prompt)
+    print ("This is what you entered:")
+    print (thetext)
+'''
+
+def get_input(ev):
+    the_input= input("請輸入")
+    alert("輸入為:"+str(上課不會滑手機))
+
+document['ch01'].bind('click',get_input)
+&lt;/script&gt;
+&lt;button id="ch01"&gt;40523137&lt;/button&gt;
+
+&lt;pre class="brush: python"&gt;
+&lt;script type="text/python3"&gt;
+from browser import document
+from browser import alert
+
+def get_input(ev):
+    the_input= input("請輸入")
+    alert("輸入為:"+str(the_input))
+
+document['ch01'].bind('click',get_input)
+&lt;/script&gt;
+&lt;button id="ch01"&gt;取輸入後, 列印出來&lt;/button&gt;
+&lt;/pre&gt;</t>
+<t tx="leo.20161230131434.4">&lt;!-- ch01 基本的列印與輸入函式 --&gt;
+&lt;script type="text/python3"&gt;
+from browser import document
+from browser import alert
+
+'''
+    # 利用 input() 取得使用者輸入, 然後進行資料處理或運算後, 列出結果
+    #01-01.py
+    print ("Hello World!")
+    #01-02.py
+    thetext = input("Enter some text ")
+    print ("This is what you entered:")
+    print (thetext)
+    #01-03.py
+    # Note that \n within quote marks forces a new line to be printed
+    thetext = input("Enter some text\n")
+    print ("This is what you entered:")
+    print (thetext)
+    #01-04.py
+    prompt  = "Enter a some text "
+    thetext = input(prompt)
+    print ("This is what you entered:")
+    print (thetext)
+'''
+
+def get_input(ev):
+    the_input= input("上課不會滑手機")
+    alert("上課不會滑手機:"+str(the_input))
+
+document['ch01'].bind('click',get_input)
+&lt;/script&gt;
+&lt;button id="ch01"&gt;40523137&lt;/button&gt;
+
+&lt;pre class="brush: python"&gt;
+&lt;script type="text/python3"&gt;
+from browser import document
+from browser import alert
+
+def get_input(ev):
+    the_input= input("請輸入")
+    alert("輸入為:"+str(the_input))
+
+document['ch01'].bind('click',get_input)
+&lt;/script&gt;
+&lt;button id="ch01"&gt;取輸入後, 列印出來&lt;/button&gt;
+&lt;/pre&gt;
+</t>
 <t tx="yen.20161011114704.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others

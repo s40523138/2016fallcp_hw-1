@@ -282,6 +282,48 @@ init_mathjax();
         <div class="col-sm-9">
 
             <article>
+                <h2><a href="../w16-xin-nian-kuai-le.html">W16 新年快樂</a></h2>
+                <div class="summary"><p>2017年元旦快樂</p>
+
+                    <a class="btn btn-default btn-xs" href="../w16-xin-nian-kuai-le.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="../cp-w15-lian-xi.html">CP W15 練習</a></h2>
+                <div class="summary"><!-- 導入 Brython 標準程式庫 -->
+
+<script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
+</script>
+
+<!-- 啟動 Brython -->
+
+<script>
+window.onload=function(){
+brython(1);
+}
+</script>
+
+<!-- 以下可以執行  Brython 程式 -->
+
+<div id="con"></div>
+
+<script type="text/python3">
+from browser import document as do
+from browser import html
+c = do["con"]
+def compa(e):
+    your_input = input("請輸入一個整數!")
+    # 如何判斷所輸入的整數比 10 大
+
+    if int(your_input) > 10:
+        c <= "所輸入的整數:" + your_input ...</script></!--></!--></!-->
+                    <a class="btn btn-default btn-xs" href="../cp-w15-lian-xi.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="../w13-lian-xi-2.html">W13  練習-2</a></h2>
                 <div class="summary"><p>將<a herf="http://mde.tw/2016fallcp/course/Python3Programs.txt">
 http://mde.tw/2016fallcp/course/Python3Programs.txt</a> 整理成brython
@@ -301,10 +343,10 @@ http://mde.tw/2016fallcp/course/Python3Programs.txt</a> 整理成brython</p>
             </article>
             <hr/>
             <article>
-                <h2><a href="../w14.html">W14</a></h2>
+                <h2><a href="../ji-suan-ji-cheng-shi-w14-fan-li-zheng-li.html">計算機程式 W14 範例整理</a></h2>
                 <div class="summary"><p>本週的學習重點在導入 Leo Editor <a href="http://leoeditor.com/tutorial-programming.html">@clean</a> 節點指令的用法, 利用子節點管理各章節的範例, 逐一將程式改寫為 Brython 格式後, 直接在瀏覽器中執行. 讓學員了解使用階層式架構管理資料的便利性.</p>
 
-                    <a class="btn btn-default btn-xs" href="../w14.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="../ji-suan-ji-cheng-shi-w14-fan-li-zheng-li.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -324,13 +366,6 @@ http://mde.tw/2016fallcp/course/Python3Programs.txt</a> 整理成brython</p>
                 </div>
             </article>
             <hr/>
-            <article>
-                <h2><a href="../w15.html">W15</a></h2>
-                <div class="summary">
-                    <a class="btn btn-default btn-xs" href="../w15.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
 
         </div>
         <div class="col-sm-3" id="sidebar">
@@ -342,6 +377,16 @@ http://mde.tw/2016fallcp/course/Python3Programs.txt</a> 整理成brython</p>
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
+                        <a href="../w16-xin-nian-kuai-le.html">
+                            W16 新年快樂
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="../cp-w15-lian-xi.html">
+                            CP W15 練習
+                        </a>
+                    </li>
+                    <li class="list-group-item">
                         <a href="../w13-lian-xi-2.html">
                             W13  練習-2
                         </a>
@@ -352,18 +397,8 @@ http://mde.tw/2016fallcp/course/Python3Programs.txt</a> 整理成brython</p>
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="../w14.html">
-                            W14
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="../w12-brython-hui-tu-fan-li.html">
-                            W12 Brython 繪圖範例
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="../w10-brython-hui-tu-fan-li.html">
-                            W10 Brython 繪圖範例
+                        <a href="../ji-suan-ji-cheng-shi-w14-fan-li-zheng-li.html">
+                            計算機程式 W14 範例整理
                         </a>
                     </li>
                 </ul>

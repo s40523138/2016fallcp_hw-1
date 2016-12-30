@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>Articles by yen - 2016Fall CPA 課程網誌 (虎尾科大MDE)</title>
+    <title>Articles by 40523137 - 2016Fall CPA 課程網誌 (虎尾科大MDE)</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -281,7 +281,15 @@ init_mathjax();
         <div class="col-sm-9">
 
             <article>
-                <h2><a href="../2016fall.html">2016Fall</a></h2>
+                <h2><a href="../w16-xin-nian-kuai-le.html">W16 新年快樂</a></h2>
+                <div class="summary"><p>2017年元旦快樂</p>
+
+                    <a class="btn btn-default btn-xs" href="../w16-xin-nian-kuai-le.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="../cp-w15-lian-xi.html">CP W15 練習</a></h2>
                 <div class="summary"><!-- 導入 Brython 標準程式庫 -->
 
 <script type="text/javascript" 
@@ -296,43 +304,21 @@ brython(1);
 }
 </script>
 
-<!-- 以下實際利用  Brython 畫圖 -->
+<!-- 以下可以執行  Brython 程式 -->
 
-<div id="container"></div>
+<div id="con"></div>
 
 <script type="text/python3">
-from browser import document as doc
+from browser import document as do
 from browser import html
-container = doc["container"]
-mvstring = ""
-num = input("請輸入重複執行次數")
-#for i in range(1,11):
-for i in range(1,int ...</script></!--></!--></!-->
-                    <a class="btn btn-default btn-xs" href="../2016fall.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="../ji-suan-ji-cheng-shi-w14-fan-li-zheng-li.html">計算機程式 W14 範例整理</a></h2>
-                <div class="summary"><p>本週的學習重點在導入 Leo Editor <a href="http://leoeditor.com/tutorial-programming.html">@clean</a> 節點指令的用法, 利用子節點管理各章節的範例, 逐一將程式改寫為 Brython 格式後, 直接在瀏覽器中執行. 讓學員了解使用階層式架構管理資料的便利性.</p>
+c = do["con"]
+def compa(e):
+    your_input = input("請輸入一個整數!")
+    # 如何判斷所輸入的整數比 10 大
 
-                    <a class="btn btn-default btn-xs" href="../ji-suan-ji-cheng-shi-w14-fan-li-zheng-li.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="../2016fall-cheng-shi-lian-xi-ti.html">2016Fall 程式練習題</a></h2>
-                <div class="summary"><p>已知截至第六週 2016fallcpa 的分組資料位於倉儲中的 <a href="./../w6_group.txt">w6_group.txt</a>, 而從學校修課系統下載的修課人員名條則為 <a href="./../w6_list.txt">w6_list.txt</a>, 請各組著手練習, 找出尚未納入分組的人員名單, 並研擬如何處置上課一個半月卻尚未進入情況的學員?</p>
-
-                    <a class="btn btn-default btn-xs" href="../2016fall-cheng-shi-lian-xi-ti.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="../2016fall-ji-jie-she-ji-zhu-ti-jiao-xue.html">2016Fall 機械設計主題教學</a></h2>
-                <div class="summary"><p>知識管理與最佳化應用實驗室試圖利用計算機程式、網際內容管理、電腦輔助設計實習與協同產品設計實習等課程, 進行與機械設計相關的主題式教學, 其中包含強化創造力的教學、令學員熟習六種工程表達方式, 並且俱備融入協同設計所需要的四大面向知識與技能.</p>
-
-                    <a class="btn btn-default btn-xs" href="../2016fall-ji-jie-she-ji-zhu-ti-jiao-xue.html">more ...</a>
+    if int(your_input) > 10:
+        c <= "所輸入的整數:" + your_input ...</script></!--></!--></!-->
+                    <a class="btn btn-default btn-xs" href="../cp-w15-lian-xi.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -347,23 +333,13 @@ for i in range(1,int ...</script></!--></!--></!-->
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
-                        <a href="../2016fall.html">
-                            2016Fall
+                        <a href="../w16-xin-nian-kuai-le.html">
+                            W16 新年快樂
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="../ji-suan-ji-cheng-shi-w14-fan-li-zheng-li.html">
-                            計算機程式 W14 範例整理
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="../2016fall-cheng-shi-lian-xi-ti.html">
-                            2016Fall 程式練習題
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="../2016fall-ji-jie-she-ji-zhu-ti-jiao-xue.html">
-                            2016Fall 機械設計主題教學
+                        <a href="../cp-w15-lian-xi.html">
+                            CP W15 練習
                         </a>
                     </li>
                 </ul>
