@@ -36,7 +36,7 @@ def gen_int():
 def lottery(e):
     for i in range(6):
         gen_int()
-    print_location &lt;= "恭喜中獎?" + html.BR()
+    print_location &lt;= "~" + html.BR()
 
 #document["but1"].bind("click", gen_int)
 document["but1"].bind("click", lottery)
@@ -53,12 +53,98 @@ def lottery(e):
     num_list = random.sample(list(range(1, 50)), 6)
     for i in range(6):
         print_location &lt;= num_list[i] + html.BR()
-    print_location &lt;= "(不會重複)恭喜中獎!" + html.BR()
+    print_location &lt;= "恭喜中獎!" + html.BR()
 
 document["but2"].bind("click", lottery)
 &lt;/script&gt;
 
-&lt;p&gt;&lt;button id="but2"&gt;恭喜發財&lt;/button&gt;&lt;/p&gt;</summary><category term="Brython"></category></entry><entry><title>CP W15 練習</title><link href="./cp-w15-lian-xi.html" rel="alternate"></link><published>2016-12-23T12:00:00+08:00</published><updated>2016-12-23T12:00:00+08:00</updated><author><name>40523137</name></author><id>tag:,2016-12-23:./cp-w15-lian-xi.html</id><summary type="html">&lt;!-- 導入 Brython 標準程式庫 --&gt;
+&lt;p&gt;&lt;button id="but2"&gt;恭喜發財&lt;/button&gt;&lt;/p&gt;
+&lt;p&gt;猜數字&lt;/p&gt;
+&lt;div id="id3"&gt;&lt;/div&gt;
+
+&lt;script type="text/python3"&gt;
+from browser import document
+from browser import html
+import random
+
+id3 = document["id3"]
+def guess(ev):
+    # 清除 id3 中的內容
+    id3.clear()
+    id3 &lt;= "開始玩猜數字遊戲" + html.BR()
+    標準答案 = random.randint(1, 100)
+    你猜的數字 = int(input("請輸入您所猜 1~100 間的整數:"))
+    猜測次數 = 1
+    while 標準答案 != 你猜的數字:
+        if 標準答案 &lt; 你猜的數字:
+            #print("太大了，再猜一次 :)加油")
+            # 清除 id3 中的內容
+            id3.clear()
+            id3 &lt;= "太大了，再猜一次 :)加油" + html.BR()
+        else:
+            #print("太小了，再猜一次 :)加油")
+            # 清除 id3 中的內容
+            id3.clear()
+            id3 &lt;= "太小了，再猜一次 :)加油" + html.BR()
+        你猜的數字 = int(input("請輸入您所猜 1~100 間的整數:"))
+        猜測次數 += 1
+
+    #print("猜對了！總共猜了", 猜測次數, "次")
+    id3 &lt;= "猜對了！答案為" + str(標準答案) + ", 總共猜了" + str(猜測次數) + "次"
+
+document["but3"].bind("click", guess)
+&lt;/script&gt;
+
+&lt;p&gt;&lt;button id="but3"&gt;玩猜數字遊戲&lt;/button&gt;&lt;/p&gt;
+&lt;div id="id4"&gt;&lt;/div&gt;
+
+&lt;script type="text/python3"&gt;
+from browser import document
+from browser import html
+import random
+
+id4 = document["id4"]
+def autoguess(ev):
+    執行次數 = 100
+    總猜測次數 = 0
+    for i in range(執行次數):
+        id4 &lt;= "第" + str(i+1) + "次玩:" + html.BR()
+        下限 = 1
+        上限 = 100
+        標準答案 = random.randint(下限, 上限)
+        pc猜的數字 = random.randint(下限, 上限)
+        #print(標準答案, pc猜的數字)
+        #integer int()
+        #string str()
+        #float float()
+        #你猜的數字 = int(input("請輸入您所猜的整數:"))
+        猜測次數 = 1
+        while 標準答案 != pc猜的數字:
+            if 標準答案 &lt; pc猜的數字:
+                #print("太大了，再猜一次 :)加油")
+                # 因此已經確定"pc猜的數字"不是答案, 因此 - 1
+                id4 &lt;= "電腦猜的數字:" + str(pc猜的數字) + " 太大了!" + html.BR()
+                上限 = pc猜的數字 - 1
+            else:
+                #print("太小了，再猜一次 :)加油")
+                # 因此已經確定"pc猜的數字"不是答案, 因此 + 1
+                id4 &lt;= "電腦猜的數字:" + str(pc猜的數字) + " 太小了!" + html.BR()
+                下限 = pc猜的數字 + 1
+            #pc猜的數字 = int(input("請輸入您所猜的整數:"))
+            pc猜的數字 = random.randint(下限, 上限)
+            猜測次數 += 1
+
+        #print("猜對了！總共猜了", 猜測次數, "次")
+        id4 &lt;= "電腦猜對了, 答案為: " + str(標準答案) + ", 總共猜了 "+ str(猜測次數) + "次" + html.BR()
+        總猜測次數 += 猜測次數
+    平均猜測次數 = int(總猜測次數/執行次數)
+    #print("平均次數", 平均猜測次數)
+    id4 &lt;= "平均次數: " + str(平均猜測次數)
+
+document["but4"].bind("click", autoguess)
+&lt;/script&gt;
+
+&lt;p&gt;&lt;button id="but4"&gt;利用程式玩猜數字&lt;/button&gt;&lt;/p&gt;</summary><category term="Brython"></category></entry><entry><title>CP W15 練習</title><link href="./cp-w15-lian-xi.html" rel="alternate"></link><published>2016-12-23T12:00:00+08:00</published><updated>2016-12-23T12:00:00+08:00</updated><author><name>40523137</name></author><id>tag:,2016-12-23:./cp-w15-lian-xi.html</id><summary type="html">&lt;!-- 導入 Brython 標準程式庫 --&gt;
 
 &lt;script type="text/javascript" 
     src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;

@@ -1,5 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>2016Fall CPA 課程網誌 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/misc.atom.xml" rel="self"></link><id>./</id><updated>2016-12-12T14:35:00+08:00</updated><entry><title>W14 練習</title><link href="./w14-lian-xi.html" rel="alternate"></link><published>2016-12-12T14:35:00+08:00</published><updated>2016-12-12T14:35:00+08:00</updated><author><name>40523209</name></author><id>tag:,2016-12-12:./w14-lian-xi.html</id><summary type="html">&lt;p&gt;以下為第十四週開始的城市練習,要利用 &lt;a href="http://mde.tw/2016fallcp/course/Python3Programs.txt"&gt;http://mde.tw/2016fallcp/course/Python3Programs.txt&lt;/a&gt; 要整理Brython 的用法.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>2016Fall CPA 課程網誌 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/misc.atom.xml" rel="self"></link><id>./</id><updated>2016-12-26T14:35:00+08:00</updated><entry><title>猜數字遊戲</title><link href="./cai-shu-zi-you-xi.html" rel="alternate"></link><published>2016-12-26T14:35:00+08:00</published><updated>2016-12-26T14:35:00+08:00</updated><author><name>40523137</name></author><id>tag:,2016-12-26:./cai-shu-zi-you-xi.html</id><summary type="html">&lt;h4&gt;W16&lt;/h4&gt;
+
+
+
+&lt;!-- 導入 Brython 標準程式庫 --&gt;
+
+&lt;script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
+&lt;/script&gt;
+
+&lt;!-- 啟動 Brython --&gt;
+
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
+
+&lt;!-- 以下實際利用  Brython 畫圖 --&gt;
+
+&lt;div id="con"&gt;&lt;/div&gt;
+
+&lt;script type="text/python3"&gt;
+from browser import alert
+from browser import document
+from browser import html
+import random
+#print("test")
+#alert("test")
+con1 = document["con"]
+con2 = document["con"]
+#import random 
+#1.利用亂數模組產生標準答案
+#標準答案 = random.randint(1, 100)
+
+#2.取得使用者所猜的整數(可以使用 try except 防止輸入非整數)
+#3.根據使用者與標準答案比較大小,並且回應提示字串
+'''4.假如利用 while 迴圈,可以在使用者沒有猜對之前繼續輸入,並累計猜題次數
+'''
+con1 &lt;= str(標準答案)
+'''
+try:
+    for i in range(1):
+        #con1 &lt;= "test"+"&lt;br /&gt;"
+        yourInput=int(input("請輸入一個整數!"))  
+        #con1 &lt;="test"+html.BR()
+        output = yourInput + 1
+        con1 &lt;="你輸入的整數加上1之後,為"+str(output)
+except:
+     con1 &lt;="拜託請輸入整數!"
+'''
+def b1(e):
+    alert("")
+document["b1"].bind("click",b1)
+
+#coding: utf-8
+# 猜數字遊戲
+import random
+
+標準答案 = random.randint(1, 100)
+你猜的數字 = int(input("請輸入您所猜的整數:"))
+猜測次數 = 1
+while 標準答案 != 你猜的數字:
+    if 標準答案 &lt; 你猜的數字:
+        print("太大了，再猜一次 :)加油")
+    else:
+        print("太小了，再猜一次 :)加油")
+    你猜的數字 = int(input("請輸入您所猜的整數:"))
+    猜測次數 += 1
+
+print1("猜對了！總共猜了", 猜測次數, "次")
+con2 &lt;= print1("猜對了！總共猜了", 猜測次數, "次")
+
+&lt;/script&gt;
+
+&lt;p&gt;&lt;button id ="b1"&gt;玩猜數字遊戲&lt;/button&gt;&lt;/p&gt;</summary><category term="每週練習"></category></entry><entry><title>W14 練習</title><link href="./w14-lian-xi.html" rel="alternate"></link><published>2016-12-12T14:35:00+08:00</published><updated>2016-12-12T14:35:00+08:00</updated><author><name>40523209</name></author><id>tag:,2016-12-12:./w14-lian-xi.html</id><summary type="html">&lt;p&gt;以下為第十四週開始的城市練習,要利用 &lt;a href="http://mde.tw/2016fallcp/course/Python3Programs.txt"&gt;http://mde.tw/2016fallcp/course/Python3Programs.txt&lt;/a&gt; 要整理Brython 的用法.
 &lt;/p&gt;
 &lt;!-- 導入 Brython 標準程式庫 --&gt;
 
