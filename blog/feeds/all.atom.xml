@@ -260,150 +260,7 @@ for i in range(5):
 do["b1"].bind("click", compa)
 &lt;/script&gt;
 &lt;button id="b1"&gt;compa&lt;/button&gt;
-&lt;/pre&gt;</summary><category term="Brython"></category></entry><entry><title>W14 練習</title><link href="./w14-lian-xi.html" rel="alternate"></link><published>2016-12-12T14:35:00+08:00</published><updated>2016-12-12T14:35:00+08:00</updated><author><name>40523209</name></author><id>tag:,2016-12-12:./w14-lian-xi.html</id><summary type="html">&lt;p&gt;以下為第十四週開始的城市練習,要利用 &lt;a href="http://mde.tw/2016fallcp/course/Python3Programs.txt"&gt;http://mde.tw/2016fallcp/course/Python3Programs.txt&lt;/a&gt; 要整理Brython 的用法.
-&lt;/p&gt;
-&lt;!-- 導入 Brython 標準程式庫 --&gt;
-
-&lt;script type="text/javascript" 
-    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
-&lt;/script&gt;
-
-&lt;!-- 啟動 Brython --&gt;
-
-&lt;script&gt;
-window.onload=function(){
-brython(1);
-}
-&lt;/script&gt;
-
-&lt;div id ="ex1"&gt;&lt;/div&gt;
-
-&lt;script type="text/python3"&gt;
-from browser import document as doc
-container = doc['ex1']
-
-container&lt;="W14練習"
-&lt;/script&gt;
-
-&lt;div id ="ex2"&gt;&lt;/div&gt;
-
-&lt;script type="text/python3"&gt;
-from browser import document as doc
-from browser import html
-container = doc['ex2']
-mystring = input("要印出什麼字串?")
-mynum = input("要印幾次?")
-
-for i in range(int(mynum)):
-    #container&lt;="W14練習-2"+html.BR()
-    container&lt;=mystring+html.BR()
-&lt;/script&gt;</summary><category term="每週練習"></category></entry><entry><title>W13 練習-2</title><link href="./w13-lian-xi-2.html" rel="alternate"></link><published>2016-12-10T12:00:00+08:00</published><updated>2016-12-10T12:00:00+08:00</updated><author><name>楊永慶</name></author><id>tag:,2016-12-10:./w13-lian-xi-2.html</id><summary type="html">&lt;p&gt;將&lt;a herf="http://mde.tw/2016fallcp/course/Python3Programs.txt"&gt;
-http://mde.tw/2016fallcp/course/Python3Programs.txt&lt;/a&gt; 整理成brython
-練習:編寫一個可以將適用者輸入的攝氏溫度,轉為華氏溫度&lt;/p&gt;
-
-
-&lt;!-- 導入 Brython 標準程式庫 --&gt;
-
-&lt;script type="text/javascript" 
-    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
-&lt;/script&gt;
-
-&lt;!-- 啟動 Brython --&gt;
-
-&lt;script&gt;
-window.onload=function(){
-brython(1);
-}
-&lt;/script&gt;
-
-&lt;!-- 以下實際利用  Brython 畫圖 --&gt;
-
-&lt;div id="temperature"&gt;&lt;/div&gt;
-
-&lt;script type="text/python3"&gt;
-from browser import document as doc
-from browser import html
-container = doc['temperature']
-mystring = ""
-cdegree = input("請輸入攝氏溫度:")
-fdegree = float(cdegree)*9/5+32
-output_string = "攝氏" +str(cdegree) + "度=華氏" +str(fdegree) + "度"
-container &lt;= output_string
-&lt;/script&gt;
-
-&lt;p&gt;開始進行範例分配&lt;/p&gt;
-&lt;p&gt;接受使用者輸入&lt;/p&gt;
-&lt;p&gt;利用aler()顯示結果&lt;/p&gt;
-&lt;p&gt;直接列印結果&lt;/p&gt;</summary><category term="Brython"></category></entry><entry><title>2016Fall</title><link href="./2016fall.html" rel="alternate"></link><published>2016-12-09T12:00:00+08:00</published><updated>2016-12-09T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:,2016-12-09:./2016fall.html</id><summary type="html">&lt;!-- 導入 Brython 標準程式庫 --&gt;
-
-&lt;script type="text/javascript" 
-    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
-&lt;/script&gt;
-
-&lt;!-- 啟動 Brython --&gt;
-
-&lt;script&gt;
-window.onload=function(){
-brython(1);
-}
-&lt;/script&gt;
-
-&lt;!-- 以下實際利用  Brython 畫圖 --&gt;
-
-&lt;div id="container"&gt;&lt;/div&gt;
-
-&lt;script type="text/python3"&gt;
-from browser import document as doc
-from browser import html
-container = doc["container"]
-mvstring = ""
-num = input("請輸入重複執行次數")
-#for i in range(1,11):
-for i in range(1,int/num)+1):
-    mystring += str(i) + ":hello mde" +html.BR()
-container &lt;= mystring
-&lt;/script&gt;
-
-&lt;script type="text/python3"&gt;
-from browser import document as doc
-&lt;/script&gt;</summary><category term="使用導引"></category></entry><entry><title>W13 練習-1</title><link href="./w13-lian-xi-1.html" rel="alternate"></link><published>2016-12-09T12:00:00+08:00</published><updated>2016-12-09T12:00:00+08:00</updated><author><name>楊永慶</name></author><id>tag:,2016-12-09:./w13-lian-xi-1.html</id><summary type="html">&lt;p&gt;將&lt;a herf="http://mde.tw/2016fallcp/course/Python3Programs.txt"&gt;
-http://mde.tw/2016fallcp/course/Python3Programs.txt&lt;/a&gt; 整理成brython&lt;/p&gt;
-
-
-&lt;!-- 導入 Brython 標準程式庫 --&gt;
-
-&lt;script type="text/javascript" 
-    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
-&lt;/script&gt;
-
-&lt;!-- 啟動 Brython --&gt;
-
-&lt;script&gt;
-window.onload=function(){
-brython(1);
-}
-&lt;/script&gt;
-
-&lt;!-- 以下實際利用  Brython 畫圖 --&gt;
-
-&lt;div id="container"&gt;&lt;/div&gt;
-
-&lt;script type="text/python3"&gt;
-from browser import document as doc
-from browser import html
-container = doc['container']
-mystring = ""
-num = input("請輸入重複執行次數:")
-#for i in range(1,11):
-for i in range(1,int(num)+1):
-    mystring += str(i)+ ":hallo mde" +html.BR()
-container &lt;= mystring
-&lt;/script&gt;
-
-&lt;p&gt;開始進行範例分配&lt;/p&gt;
-&lt;p&gt;接受使用者輸入&lt;/p&gt;
-&lt;p&gt;利用aler()顯示結果&lt;/p&gt;
-&lt;p&gt;直接列印結果&lt;/p&gt;</summary><category term="Brython"></category></entry><entry><title>計算機程式 W14 範例整理</title><link href="./ji-suan-ji-cheng-shi-w14-fan-li-zheng-li.html" rel="alternate"></link><published>2016-12-06T13:00:00+08:00</published><updated>2016-12-06T13:00:00+08:00</updated><author><name>yen</name></author><id>tag:,2016-12-06:./ji-suan-ji-cheng-shi-w14-fan-li-zheng-li.html</id><summary type="html">&lt;p&gt;本週的學習重點在導入 Leo Editor &lt;a href="http://leoeditor.com/tutorial-programming.html"&gt;@clean&lt;/a&gt; 節點指令的用法, 利用子節點管理各章節的範例, 逐一將程式改寫為 Brython 格式後, 直接在瀏覽器中執行. 讓學員了解使用階層式架構管理資料的便利性.&lt;/p&gt;
+&lt;/pre&gt;</summary><category term="Brython"></category></entry><entry><title>W14</title><link href="./w14.html" rel="alternate"></link><published>2016-12-17T13:00:00+08:00</published><updated>2016-12-17T13:00:00+08:00</updated><author><name>yen</name></author><id>tag:,2016-12-17:./w14.html</id><summary type="html">&lt;p&gt;本週的學習重點在導入 Leo Editor &lt;a href="http://leoeditor.com/tutorial-programming.html"&gt;@clean&lt;/a&gt; 節點指令的用法, 利用子節點管理各章節的範例, 逐一將程式改寫為 Brython 格式後, 直接在瀏覽器中執行. 讓學員了解使用階層式架構管理資料的便利性.&lt;/p&gt;
 
 
 &lt;p&gt;以下為 &lt;a href="http://mde.tw/2016fallcp/course/Python3Programs.txt"&gt;http://mde.tw/2016fallcp/course/Python3Programs.txt&lt;/a&gt; 中的 ch01 綜合範例, 其餘範例位於本 Leo Editor 專案檔中的 "Python3 程式範例" 節點, 請各組一一將範例程式碼與執行結果, 放入各學員的課程網誌中.&lt;/p&gt;
@@ -806,7 +663,150 @@ doc['ex4'].bind('click',ex4)
 &lt;script type="text/python3"&gt;
 from browser import document
 from browser import alert
-&lt;/script&gt;&lt;/p&gt;</summary><category term="Brython"></category></entry><entry><title>W12 Brython 繪圖範例</title><link href="./w12-brython-hui-tu-fan-li.html" rel="alternate"></link><published>2016-12-02T00:00:00+08:00</published><updated>2016-12-02T00:00:00+08:00</updated><author><name>楊永慶</name></author><id>tag:,2016-12-02:./w12-brython-hui-tu-fan-li.html</id><summary type="html">&lt;p&gt;Brython 繪圖&lt;/p&gt;
+&lt;/script&gt;&lt;/p&gt;</summary><category term="Brython"></category></entry><entry><title>W14 練習</title><link href="./w14-lian-xi.html" rel="alternate"></link><published>2016-12-12T14:35:00+08:00</published><updated>2016-12-12T14:35:00+08:00</updated><author><name>40523209</name></author><id>tag:,2016-12-12:./w14-lian-xi.html</id><summary type="html">&lt;p&gt;以下為第十四週開始的城市練習,要利用 &lt;a href="http://mde.tw/2016fallcp/course/Python3Programs.txt"&gt;http://mde.tw/2016fallcp/course/Python3Programs.txt&lt;/a&gt; 要整理Brython 的用法.
+&lt;/p&gt;
+&lt;!-- 導入 Brython 標準程式庫 --&gt;
+
+&lt;script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
+&lt;/script&gt;
+
+&lt;!-- 啟動 Brython --&gt;
+
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
+
+&lt;div id ="ex1"&gt;&lt;/div&gt;
+
+&lt;script type="text/python3"&gt;
+from browser import document as doc
+container = doc['ex1']
+
+container&lt;="W14練習"
+&lt;/script&gt;
+
+&lt;div id ="ex2"&gt;&lt;/div&gt;
+
+&lt;script type="text/python3"&gt;
+from browser import document as doc
+from browser import html
+container = doc['ex2']
+mystring = input("要印出什麼字串?")
+mynum = input("要印幾次?")
+
+for i in range(int(mynum)):
+    #container&lt;="W14練習-2"+html.BR()
+    container&lt;=mystring+html.BR()
+&lt;/script&gt;</summary><category term="每週練習"></category></entry><entry><title>W13 練習-2</title><link href="./w13-lian-xi-2.html" rel="alternate"></link><published>2016-12-10T12:00:00+08:00</published><updated>2016-12-10T12:00:00+08:00</updated><author><name>楊永慶</name></author><id>tag:,2016-12-10:./w13-lian-xi-2.html</id><summary type="html">&lt;p&gt;將&lt;a herf="http://mde.tw/2016fallcp/course/Python3Programs.txt"&gt;
+http://mde.tw/2016fallcp/course/Python3Programs.txt&lt;/a&gt; 整理成brython
+練習:編寫一個可以將適用者輸入的攝氏溫度,轉為華氏溫度&lt;/p&gt;
+
+
+&lt;!-- 導入 Brython 標準程式庫 --&gt;
+
+&lt;script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
+&lt;/script&gt;
+
+&lt;!-- 啟動 Brython --&gt;
+
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
+
+&lt;!-- 以下實際利用  Brython 畫圖 --&gt;
+
+&lt;div id="temperature"&gt;&lt;/div&gt;
+
+&lt;script type="text/python3"&gt;
+from browser import document as doc
+from browser import html
+container = doc['temperature']
+mystring = ""
+cdegree = input("請輸入攝氏溫度:")
+fdegree = float(cdegree)*9/5+32
+output_string = "攝氏" +str(cdegree) + "度=華氏" +str(fdegree) + "度"
+container &lt;= output_string
+&lt;/script&gt;
+
+&lt;p&gt;開始進行範例分配&lt;/p&gt;
+&lt;p&gt;接受使用者輸入&lt;/p&gt;
+&lt;p&gt;利用aler()顯示結果&lt;/p&gt;
+&lt;p&gt;直接列印結果&lt;/p&gt;</summary><category term="Brython"></category></entry><entry><title>2016Fall</title><link href="./2016fall.html" rel="alternate"></link><published>2016-12-09T12:00:00+08:00</published><updated>2016-12-09T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:,2016-12-09:./2016fall.html</id><summary type="html">&lt;!-- 導入 Brython 標準程式庫 --&gt;
+
+&lt;script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
+&lt;/script&gt;
+
+&lt;!-- 啟動 Brython --&gt;
+
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
+
+&lt;!-- 以下實際利用  Brython 畫圖 --&gt;
+
+&lt;div id="container"&gt;&lt;/div&gt;
+
+&lt;script type="text/python3"&gt;
+from browser import document as doc
+from browser import html
+container = doc["container"]
+mvstring = ""
+num = input("請輸入重複執行次數")
+#for i in range(1,11):
+for i in range(1,int/num)+1):
+    mystring += str(i) + ":hello mde" +html.BR()
+container &lt;= mystring
+&lt;/script&gt;
+
+&lt;script type="text/python3"&gt;
+from browser import document as doc
+&lt;/script&gt;</summary><category term="使用導引"></category></entry><entry><title>W13 練習-1</title><link href="./w13-lian-xi-1.html" rel="alternate"></link><published>2016-12-09T12:00:00+08:00</published><updated>2016-12-09T12:00:00+08:00</updated><author><name>楊永慶</name></author><id>tag:,2016-12-09:./w13-lian-xi-1.html</id><summary type="html">&lt;p&gt;將&lt;a herf="http://mde.tw/2016fallcp/course/Python3Programs.txt"&gt;
+http://mde.tw/2016fallcp/course/Python3Programs.txt&lt;/a&gt; 整理成brython&lt;/p&gt;
+
+
+&lt;!-- 導入 Brython 標準程式庫 --&gt;
+
+&lt;script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
+&lt;/script&gt;
+
+&lt;!-- 啟動 Brython --&gt;
+
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
+
+&lt;!-- 以下實際利用  Brython 畫圖 --&gt;
+
+&lt;div id="container"&gt;&lt;/div&gt;
+
+&lt;script type="text/python3"&gt;
+from browser import document as doc
+from browser import html
+container = doc['container']
+mystring = ""
+num = input("請輸入重複執行次數:")
+#for i in range(1,11):
+for i in range(1,int(num)+1):
+    mystring += str(i)+ ":hallo mde" +html.BR()
+container &lt;= mystring
+&lt;/script&gt;
+
+&lt;p&gt;開始進行範例分配&lt;/p&gt;
+&lt;p&gt;接受使用者輸入&lt;/p&gt;
+&lt;p&gt;利用aler()顯示結果&lt;/p&gt;
+&lt;p&gt;直接列印結果&lt;/p&gt;</summary><category term="Brython"></category></entry><entry><title>W12 Brython 繪圖範例</title><link href="./w12-brython-hui-tu-fan-li.html" rel="alternate"></link><published>2016-12-02T00:00:00+08:00</published><updated>2016-12-02T00:00:00+08:00</updated><author><name>楊永慶</name></author><id>tag:,2016-12-02:./w12-brython-hui-tu-fan-li.html</id><summary type="html">&lt;p&gt;Brython 繪圖&lt;/p&gt;
 
 
 &lt;p&gt;繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖&lt;/p&gt;

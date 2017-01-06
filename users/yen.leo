@@ -525,8 +525,8 @@ def domake():
 make = threading.Thread(target=domake)
 make.start()</t>
 <t tx="leo.20161216135359.1">@language md
-Title: 計算機程式 W14 範例整理
-Date: 2016-12-06 13:00
+Title:  W14 
+Date: 2016-12-17 13:00
 Category: Course
 Tags: Brython
 Author: yen
